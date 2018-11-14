@@ -7,19 +7,19 @@
     // var number = Math.floor(Math.random()*30+ 1);
     var numberOptions = [30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40];
     //var number = numberOptions[Math.round(Math.random())];
-    number = numberOptions[Math.floor(Math.random() * numberOptions.length)];
+    var number = numberOptions[Math.floor(Math.random() * numberOptions.length)];
     var images = ["assets/images/1.jpeg", "assets/images/2.jpeg", "assets/images/3.jpeg", "assets/images/4.jpeg"];
-    console.log(number);
+    // console.log(number);
     $("#randomnumber").text(number);
 
-    function resetGames(){
-        counter = 0;
-        number = numberOptions[Math.floor(Math.random() * numberOptions.length)];
-        $("#randomnumber").text(number);
-        $("#totalscore").text(counter);
-        (".crystals").empty();
-        // crystalImage();
-    };
+    // function resetGames(){
+    //     counter = 0;
+    //     number = numberOptions[Math.floor(Math.random() * numberOptions.length)];
+    //     $("#randomnumber").text(number);
+    //     $("#totalscore").text(counter);
+    //     // (".crystals").empty();
+    //     // crystalImage();
+    // };
     
     
     //function crystalImage(){
@@ -34,6 +34,14 @@
         }
     //};
 //crystalImage();
+
+function resetGames(){
+    counter = 0;
+    number = numberOptions[Math.floor(Math.random() * numberOptions.length)];
+    $("#randomnumber").text(number);
+    $("#totalscore").text(counter);
+};
+
 $(".crystal-img").on("click", function(){
 
         var crystalVal = $(this).attr("data-crystalvalue");
